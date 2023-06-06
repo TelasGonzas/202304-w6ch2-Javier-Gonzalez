@@ -1,4 +1,4 @@
-import phoneReducer, { PhonesState } from "./phone.slice";
+import phoneReducer, { PhonesState, add } from "./phone.slice";
 
 describe("phone reducer", () => {
   const initialState: PhonesState = {
@@ -6,5 +6,9 @@ describe("phone reducer", () => {
   };
   test("should handle initial state", () => {
     expect(phoneReducer(undefined, { type: "unknown" })).toEqual(initialState);
+  });
+  it("should handle incrementByAmount", () => {
+    const actual = phoneReducer(initialState, add(2));
+    expect(actual.phoneNumber).toEqual("2");
   });
 });
