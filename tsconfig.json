@@ -21,6 +21,6 @@
 
     "esModuleInterop": true
   },
-  "include": ["src", "setupTests.ts"],
+  "include": ["src", "setupTests.ts", "src/features/phone/components"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
