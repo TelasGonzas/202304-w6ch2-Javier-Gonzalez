@@ -1,16 +1,13 @@
-import { useContext } from "react";
-import { Key } from "./key";
-import { PhoneC}
+import { Key } from "../key/key";
+import { usePhone } from "../../../../core/hook/use.Phone";
 
 export function Keyboard() {
-  const {
-    phoneContext: { keyValue },
-  } = useContext(PhoneContext);
+  const { dial } = usePhone();
 
   return (
     <div className="keyboard-container">
       <ol className="keyboard">
-        {keyValue.map((item) => (
+        {dial.map((item) => (
           <Key key={item} item={item}></Key>
         ))}
       </ol>

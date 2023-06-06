@@ -1,35 +1,21 @@
-import { useContext } from "react";
-import { PhoneContext } from "../context/phone.context";
+import { usePhone } from "../../../../core/hook/use.Phone";
 
 type PropsType = {
   item: string;
 };
 
 export function Key({ item }: PropsType) {
-  const {
-    phoneContext: { handleAddNumber, handleDelete, calling },
-  } = useContext(PhoneContext);
+  const { handleAdd } = usePhone();
 
   function handleClick() {
-    if (!calling) handleAddNumber(item);
-  }
-
-  function handleClickDelete() {
-    if (!calling) handleDelete();
+    handleAdd(item);
   }
 
   return (
     <>
       <li>
-        {item !== "delete" ? (
-          <button className="key" onClick={handleClick}>
-            {item}
-          </button>
-        ) : (
-          <button className="key big" onClick={handleClickDelete}>
-            {item}
-          </button>
-        )}
+        <button className="key" onClick={handleClick}></button>
+        <button className="key big"></button>
       </li>
     </>
   );
