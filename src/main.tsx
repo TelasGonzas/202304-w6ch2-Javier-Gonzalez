@@ -6,7 +6,7 @@ import { store } from "./core/store/store";
 import App from "./core/app/app";
 import "./styles.css";
 
-ReactDOM.createRoot(document.querySelector("#root") as HTMLElement).render(
+ReactDOM.createRoot(document.querySelector(".container") as HTMLElement).render(
   <React.StrictMode>
     <Router>
       <Provider store={store}>
