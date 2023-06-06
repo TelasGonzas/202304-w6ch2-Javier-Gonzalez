@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Phone } from "../models/phone";
 
 export type PhonesState = {
   phoneNumber: string;
