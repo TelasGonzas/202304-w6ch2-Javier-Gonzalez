@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { usePhone } from "../../../../core/hook/use.Phone";
 
 type PropsType = {
@@ -14,8 +15,13 @@ export function Key({ item }: PropsType) {
   return (
     <>
       <li>
-        <button className="key" onClick={handleClick}></button>
-        <button className="key big"></button>
+        {item !== "delete" ? (
+          <button className="key" onClick={handleClick}>
+            {item}
+          </button>
+        ) : (
+          <button className="key big">{item}</button>
+        )}
       </li>
     </>
   );
