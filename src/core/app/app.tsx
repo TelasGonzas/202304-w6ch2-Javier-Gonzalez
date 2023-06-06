@@ -1,6 +1,6 @@
-import { Actions } from "./components/actions";
-import { Info } from "./components/info";
-import { Keyboard } from "./components/keyboard";
+import { Actions } from "../../features/phone/components/actions/actions";
+import { Info } from "../../features/phone/components/info/info";
+import { Keyboard } from "../../features/phone/components/keyboard/keyboard";
 
 export default function App() {
   return (
