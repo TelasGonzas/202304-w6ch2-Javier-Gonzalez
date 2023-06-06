@@ -1,51 +1,27 @@
-# Week6 - Redux
+# Week 6 - Challenge 1
 
-## Day1
+## Teléfono React + FLUX (useReducer + hook + provider)
 
-Previous React project
+Aquí tienes la maquetación HTML/CSS de una aplicación, tendrás que programarla en React.
 
-- .editorconfig
-- .eslintrc.cjs
-- .gitignore
-- jest.config.js
-- package.json
-- tsconfig.json
-- tsconfig.node.json
-- vite.config.ts
+- Se debe poder escribir un número de teléfono clicando en los botones numéricos. La tecla borrar puede borrar el último dígito o borrar el número completo, como prefieras.
+- Sólo se verá o el botón Llamar o el botón Colgar, nunca los dos a la vez.
+- No se puede introducir un número de más de 9 cifras.
+- El botón Llamar sólo se puede pulsar si el número tiene 9 cifras. Cuando tenga 9 cifras el botón debe tener la clase "active".
+- El mensaje superior "Llamando..." sólo aparece cuando se pulsa el botón "Llamar" y mientras dure la llamada. Usa la clase "off" para controlar su visibilidad (el elemento HTML correspondiente debe seguir estando, aunque no se vea).
+- Al pulsar el botón "Llamar", éste debe desaparecer del DOM y debe aparecer en su lugar el botón "Colgar". El teclado tiene que quedar deshabilitado.
+- Al pulsar el botón "Colgar", éste debe desaparecer y debe aparecer en su lugar el botón "Llamar". El teclado tiene que habilitarse. Además, se debe borrar el número de teléfono.
+- Si no ocurre nada tras cinco segundos de llamada, ésta se debe colgar automáticamente.
 
-- index.html
-- /src/vite-env.d.ts
-- /src/main.tsx
-- /src/index.css
-- /public
-- /__mocks__/assetsMock.js
+Separa todo en los siguientes componentes:
 
-- .github/workflows/sonar.yml
-- sonar-project.properties
+- Info
+- Display
+- Actions
+  - Action
+- Keyboard
+  - Key
 
-Install redux
+Entrega también un listado de responsabilidades.
 
-```shell
-npm i react-redux @reduxjs/toolkit
-```
-
-## Day2 - Redux
-
-- Store -> REDUX / RTK -> configureStore
-- Provider -> REDUX
-
-- Actions + Reducer -> Slice -> RTK
-
-  - type/interface State
-  - initial State
-  - createSlice:
-    - name
-    - initialState
-    - reducer
-
-- export slice.actions
-- export default slice.reducer
-
-- En vez de useReducer -> hooks de REDUX:
-  - useSelector
-  - useDispatch
+Test al 100%

@@ -1,5 +1,5 @@
-import { Action } from "./action";
-import { Display } from "./display";
+import { Action } from "../action/action";
+import { Display } from "../display/display";
 
 export function Actions() {
   return (
